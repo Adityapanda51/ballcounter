@@ -1,38 +1,64 @@
+/* App.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 70px;
+}
 .App {
   text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.buttons {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ball-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  animation: move-and-rotate 10s linear infinite;
 }
 
-.App-link {
-  color: #61dafb;
+
+.buttons button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: black;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button:hover {
+  background-color: #45a049;
+}
+
+.button.reset {
+  background-color: #f44336; /* Red */
+}
+
+.button.reset:hover {
+  background-color: #d32f2f;
 }
